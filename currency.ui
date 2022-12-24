@@ -375,7 +375,17 @@ QPushButton::pressed{
 </string>
        </property>
        <property name="text">
-        <string>⌫</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/E:/image/cancel.png</normaloff>:/E:/image/cancel.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
        </property>
       </widget>
      </item>
@@ -479,6 +489,8 @@ QPushButton::pressed{
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>E:/image/menu.png</file>
+        <file>E:/image/cancel.png</file>
     </qresource>
 </RCC>
