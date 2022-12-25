@@ -14,19 +14,19 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->stackedWidget->removeWidget(ui->page);
 
-    Standard  * s1 = new Standard();
-    Science  * s2 = new Science();
-    Programmer  * s3 = new Programmer();
-    DateCalc  * s4= new DateCalc();
-    Currency *s5 = new Currency();
-    Volume *s6 = new Volume();
+    Standard  * test1 = new Standard();
+    Science  * test2 = new Science();
+    Programmer  * test3 = new Programmer();
+    DateCalc  * test4= new DateCalc();
+    Currency *test5 = new Currency();
+    Volume *test6 = new Volume();
 
-    ui->stackedWidget->addWidget(s1);
-    ui->stackedWidget->addWidget(s2);
-    ui->stackedWidget->addWidget(s3);
-    ui->stackedWidget->addWidget(s4);
-    ui->stackedWidget->addWidget(s5);
-    ui->stackedWidget->addWidget(s6);
+    ui->stackedWidget->addWidget(test1);
+    ui->stackedWidget->addWidget(test2);
+    ui->stackedWidget->addWidget(test3);
+    ui->stackedWidget->addWidget(test4);
+    ui->stackedWidget->addWidget(test5);
+    ui->stackedWidget->addWidget(test6);
     menu = new QMenu(this);
    QAction *pAct1 = new QAction("标准", this);
    pAct1->setData( 1);

@@ -21,10 +21,37 @@ class Science : public QWidget
 public:
     explicit Science(QWidget *parent = nullptr);
     ~Science();
+    QString operand;
+    QString op;
+    QString lastKey;
+    QStack<QString> operands;
+    QMap<int,QPushButton *> digitBTNs;
 
+    QString calculation( );
+
+private slots:
+    void btnNumClicked();
+
+    void on_btnPeriod_clicked();
+
+    void on_btnDel_clicked();
+
+
+    void btnBinaryOperatorClicked();
+
+    void on_btnClear_clicked();
+
+    void btnUnaryOperatorClicked();
+    void on_btnEqual_clicked();
+
+    void on_btnClearAll_clicked();
+
+    void on_btnZhengFu_clicked();
+
+    virtual void keyPressEvent(QKeyEvent *event);
 
 private:
     Ui::Science *ui;
 };
 
-#endif // SCIENCE_H
+#endif
