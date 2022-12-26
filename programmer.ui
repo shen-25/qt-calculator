@@ -575,7 +575,7 @@ QPushButton::pressed{
 </string>
        </property>
        <property name="text">
-        <string>C</string>
+        <string>CE</string>
        </property>
       </widget>
      </item>
