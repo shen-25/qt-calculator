@@ -35,6 +35,7 @@ public:
     QString op;
     QString lastKey;
     QVector<QString> operands;
+     //数组遍历（键盘）
     QVector<QPushButton *> digitBTNs;
     QVector<QLabel *>  labels;
 
@@ -45,17 +46,6 @@ private slots:
 
     void  updateDisplayJZ(int row);
 
-    void on_btnEqual_clicked();
-
-    void on_btnClearAll_clicked();
-
-    void on_btnZhengFu_clicked();
-    void on_btnPeriod_clicked();
-
-    void on_btnDel_clicked();
-
-
-
     void btnNumClicked();
 
     void transJZ();
@@ -65,6 +55,15 @@ private slots:
     void btnUnaryOperatorClicked();
 
 
+    void on_btnPeriod_clicked();
+
+    void on_btnDel_clicked();
+
+    void on_btnEqual_clicked();
+
+    void on_btnClearAll_clicked();
+
+    void on_btnZhengFu_clicked();
 
 
     virtual void keyPressEvent(QKeyEvent *event);
@@ -74,4 +73,4 @@ private:
     Ui::Programmer *ui;
 };
 
-#endif
+#endif // PROGRAMMER_H

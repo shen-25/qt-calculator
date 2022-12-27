@@ -15,6 +15,8 @@ public:
     explicit DateCalc(QWidget *parent = nullptr);
     ~DateCalc();
 
+public slots:
+    void on_dateChanged(const QDate &date);
 private:
     Ui::DateCalc *ui;
 };

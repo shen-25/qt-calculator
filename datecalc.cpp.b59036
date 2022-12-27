@@ -9,6 +9,7 @@ DateCalc::DateCalc(QWidget *parent) :
        QDateTime current_date_time = QDateTime::currentDateTime();
      ui->dateEditStart->setDateTime(current_date_time);
      ui->dateEditEnd->setDateTime(current_date_time);
+     ui->labelResult->setText("0");
 
     connect(ui->dateEditStart , &QDateEdit::dateChanged , [ this ]( const QDate &date)
     {
