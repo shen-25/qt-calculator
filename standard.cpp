@@ -19,16 +19,14 @@ Standard::Standard(QWidget *parent) :
     foreach(auto btn, digitBTNs)
          connect(btn,SIGNAL(clicked()),this,SLOT(btnNumClicked()));
 
-
-    connect(ui->btnPlus,SIGNAL(clicked()),this,SLOT(btnBinaryOperatorClicked()));
-    connect(ui->btnMinus,SIGNAL(clicked()),this,SLOT(btnBinaryOperatorClicked()));
-    connect(ui->btnMultiple,SIGNAL(clicked()),this,SLOT(btnBinaryOperatorClicked()));
-    connect(ui->btnDivide,SIGNAL(clicked()),this,SLOT(btnBinaryOperatorClicked()));
-
     connect(ui->btnPercentage,SIGNAL(clicked()),this,SLOT(btnUnaryOperatorClicked()));
     connect(ui->btnInverse,SIGNAL(clicked()),this,SLOT(btnUnaryOperatorClicked()));
+    connect(ui->btnPlus,SIGNAL(clicked()),this,SLOT(btnBinaryOperatorClicked()));
+    connect(ui->btnDivide,SIGNAL(clicked()),this,SLOT(btnBinaryOperatorClicked()));
     connect(ui->btnSquare,SIGNAL(clicked()),this,SLOT(btnUnaryOperatorClicked()));
     connect(ui->btnSqrt,SIGNAL(clicked()),this,SLOT(btnUnaryOperatorClicked()));
+    connect(ui->btnMinus,SIGNAL(clicked()),this,SLOT(btnBinaryOperatorClicked()));
+    connect(ui->btnMultiple,SIGNAL(clicked()),this,SLOT(btnBinaryOperatorClicked()));
 }
 
 QString  Standard::calculation( )
@@ -207,32 +205,39 @@ void Standard::on_btnZhengFu_clicked(){
 
 }
 
-
+//按键事件操作符的逻辑处理
 void Standard::keyPressEvent(QKeyEvent *event){
     qDebug() << event->key();
 
-    foreach(auto btnkey , digitBTNs.keys()) {
-        if(event->key() == btnkey)
-            digitBTNs[btnkey]->animateClick(100);
-    }
+        foreach(auto btnkey , digitBTNs.keys()) {
+            if(event->key() == btnkey)
+                digitBTNs[btnkey]->animateClick(100);
+        }
 
-    if(event->text() == "+" )
+        if(event->text() == "+" ){
             ui->btnPlus->animateClick(100);
-        else if(event->text() == "-" )
+        }
+        else if(event->text() == "-" ){
             ui->btnMinus->animateClick(100);
-        else if(event->text() == "×" )
-            ui->btnMultiple->animateClick(100);
-        else if(event->text() == "÷" )
-            ui->btnDivide->animateClick(100);
-        else if(event->text() == "." )
-            ui->btnPeriod->animateClick(100);
-        else if(event->text() == "%" )
+        }
+        else if(event->text() == "×" ){
+           ui->btnMultiple->animateClick(100);
+        }
+        else if(event->text() == "÷" ){
+          ui->btnDivide->animateClick(100);
+        }
+        else if(event->text() == "." ){
+          ui->btnPeriod->animateClick(100);
+        }
+        else if(event->text() == "%" ){
             ui->btnPercentage->animateClick(100);
-        else if(event->text() == "=" )
-            ui->btnEqual->animateClick(100);
-        else if(event->key() == Qt::Key_Backspace )
+        }
+        else if(event->text() == "=" ){
+         ui->btnEqual->animateClick(100);
+        }
+        else if(event->key() == Qt::Key_Backspace ){
             ui->btnDel->animateClick(100);
-
+        }
 }
 
 Standard::~Standard()

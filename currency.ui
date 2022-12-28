@@ -18,8 +18,23 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label1">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>14</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>中国-元</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
       <widget class="QLabel" name="labelCHN">
        <property name="minimumSize">
         <size>
@@ -44,22 +59,22 @@
        </property>
       </widget>
      </item>
-     <item>
-      <widget class="QLabel" name="label1">
+     <item row="3" column="0">
+      <widget class="QLabel" name="label">
        <property name="font">
         <font>
-         <family>微软雅黑</family>
+         <family>Microsoft YaHei</family>
          <pointsize>14</pointsize>
          <weight>50</weight>
          <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>人民币-元</string>
+        <string>美国-美元</string>
        </property>
       </widget>
      </item>
-     <item>
+     <item row="2" column="0">
       <widget class="QLabel" name="labelUSA">
        <property name="font">
         <font>
@@ -256,7 +271,7 @@ QPushButton::pressed{
        </property>
        <property name="icon">
         <iconset resource="res.qrc">
-         <normaloff>:/E:/image/cancel.png</normaloff>:/E:/image/cancel.png</iconset>
+         <normaloff>:/images/cancel.png</normaloff>:/images/cancel.png</iconset>
        </property>
        <property name="iconSize">
         <size>

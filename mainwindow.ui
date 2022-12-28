@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>394</width>
-    <height>407</height>
+    <width>450</width>
+    <height>452</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,19 +16,21 @@
   <property name="styleSheet">
    <string notr="true">QMenu {
     background-color : rgb(253,253,254);
- padding:5px;
- border-radius:15px;
+ 	padding:5px 5px;
+ 	border-radius:15px;
 }
 QMenu::item {
-    font-size:10pt;
+    font-size:11pt;
     color: rgb(0,0,0);
     background-color:rgb(253,253,254);
-    padding: 8px 25px 6px 10px;
+    padding: 8px 35px 12px 10px;
+   
     margin: 4px 1px;
 }
 QMenu::item:selected {
     background-color : rgb(236,236,237);
 }
+
 QMenu::icon:checked {
     background: rgb(253,253,254);
     position: absolute;
@@ -46,7 +48,10 @@ QMenu::separator {
     background: rgb(235,235,236);
     margin-left: 10px;
     margin-right: 10px;
-} </string>
+} 
+QMenu::item::icon{
+margin-right:12px;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -56,7 +61,7 @@ QMenu::separator {
        <widget class="QPushButton" name="pushButtonMenu">
         <property name="maximumSize">
          <size>
-          <width>60</width>
+          <width>50</width>
           <height>16777215</height>
          </size>
         </property>
@@ -65,7 +70,7 @@ QMenu::separator {
         </property>
         <property name="icon">
          <iconset resource="res.qrc">
-          <normaloff>:/E:/image/menu.png</normaloff>:/E:/image/menu.png</iconset>
+          <normaloff>:/images/menu.png</normaloff>:/images/menu.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -83,13 +88,13 @@ QMenu::separator {
         <property name="font">
          <font>
           <family>微软雅黑</family>
-          <pointsize>18</pointsize>
+          <pointsize>17</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
         <property name="text">
-         <string>文本</string>
+         <string>这是主界面</string>
         </property>
        </widget>
       </item>
@@ -108,7 +113,7 @@ QMenu::separator {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>394</width>
+     <width>450</width>
      <height>26</height>
     </rect>
    </property>
