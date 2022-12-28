@@ -119,12 +119,12 @@ font-size:18px;
     <font>
      <family>微软雅黑</family>
      <pointsize>14</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
-    <string>差值</string>
+    <string>相同日期</string>
    </property>
   </widget>
  </widget>

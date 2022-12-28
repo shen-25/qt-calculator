@@ -20,18 +20,20 @@ DateCalc::DateCalc(QWidget *parent) :
     });
 }
 
-DateCalc::~DateCalc()
-{
+DateCalc::~DateCalc(){
     delete ui;
 }
 
-void DateCalc::on_dateChanged(const QDate &date)
-{
+void DateCalc::on_dateChanged(const QDate &date){
      QDateTime start = ui->dateEditStart->dateTime();
      QDateTime end = ui->dateEditEnd->dateTime();
 
        int days = end.daysTo(start);
-
-    ui->labelResult->setText(QString("%1天").arg(days));
+       if(days == 0){
+             ui->labelResult->setText("相同日期");
+       } else{
+           ui->labelResult->setText(QString("%1天").arg(days));
+       }
 }
+
 
